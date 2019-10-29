@@ -40,3 +40,76 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const middleImg = document.getElementById('middle-img');
+middleImg.src = "img/mid-page-accent.jpg";
+
+//Nav
+
+const headerNav = document.querySelectorAll('a');
+headerNav[0].textContent = siteContent['nav']['nav-item-1'];
+headerNav[1].textContent = siteContent['nav']['nav-item-2'];
+headerNav[2].textContent = siteContent['nav']['nav-item-3'];
+headerNav[3].textContent = siteContent['nav']['nav-item-4'];
+headerNav[4].textContent = siteContent['nav']['nav-item-5'];
+headerNav[5].textContent = siteContent['nav']['nav-item-6'];
+
+//CTA
+
+const ctaHeader = document.querySelector('cta-text, h1');
+const ctaImg = document.getElementById('cta-img');
+const ctaBtn = document.querySelector('cta-text, button');
+
+ctaHeader.textContent = siteContent['cta']['h1'];
+ctaImg.src = siteContent['cta']['img-src'];
+ctaBtn.textContent = siteContent['cta']['button'];
+
+
+//Main-Content
+
+const mainTop = document.querySelectorAll('h4');
+const topP = document.querySelectorAll('top-content, p');
+const bottomP = document.querySelectorAll('bottom-content, p')
+
+mainTop[0].textContent = siteContent['main-content']['features-h4'];
+mainTop[1].textContent = siteContent['main-content']['about-h4'];
+mainTop[2].textContent = siteContent['main-content']['services-h4'];
+mainTop[3].textContent = siteContent['main-content']['product-h4'];
+mainTop[4].textContent = siteContent['main-content']['vision-h4'];
+mainTop[5].textContent = siteContent['contact']['contact-h4'];
+
+topP[0].textContent = siteContent['main-content']['features-content']
+topP[1].textContent = siteContent['main-content']['about-content']
+
+bottomP[2].textContent = siteContent['main-content']['services-content']
+bottomP[3].textContent = siteContent['main-content']['product-content']
+bottomP[4].textContent = siteContent['main-content']['vision-content']
+
+//Contact
+
+const contactInfo = document.querySelectorAll('.contact p');
+
+contactInfo[0].textContent = siteContent['contact']['address'];
+contactInfo[1].textContent = siteContent['contact']['phone'];
+contactInfo[2].textContent = siteContent['contact']['email'];
+
+
+//Stlyes
+
+const newNav = document.querySelector('nav');
+
+const newIdeaOne = document.createElement('a');
+const newIdeaTwo = document.createElement('a');
+
+newIdeaOne.textContent = "newIdeaOne";
+newIdeaTwo.textContent = "newIdeaTwo";
+
+newNav.prepend(newIdeaOne);
+newNav.append(newIdeaTwo);
+
+
+document.querySelectorAll('nav a').forEach(element => {
+  element.style.color = 'green';
+});
+
+
